@@ -1,3 +1,5 @@
+## USED ONLY FOR A QUALITATIVE SENSITIVITY ANALYSIS OF PRINCIPAL COMPONENTS TO KEEP
+
 from pathlib import Path
 import warnings
 import os
@@ -378,7 +380,7 @@ def run_loso(raw_features, feature_cols, signal_name="all", n_pcs=5, gmm_percent
 
 
 # =============================================================================
-# PCA Hyperparameter Search
+# PCA Sensitivity Analysis
 
 def summarize_loso_predictions(preds, model):
     m = confusion_metrics(preds["is_puzzle"], preds[f"{model}_pred"])
